@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
-const HeroCTA = () => {
+const HomeCTA = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -24,4 +24,4 @@ const HeroCTA = () => {
     </motion.div>
   );
 };
-export default HeroCTA;
+export default HomeCTA;

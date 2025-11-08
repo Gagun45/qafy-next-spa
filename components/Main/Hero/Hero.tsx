@@ -2,12 +2,12 @@
 
 import Container from "@/components/General/Container/Container";
 import { motion } from "framer-motion";
-import HeroHeading from "./HeroHeading/HeroHeading";
-import HeroCTA from "./HeroCTA/HeroCTA";
+import HomeHeading from "./HomeHeading/HomeHeading";
+import HomeCTA from "./HomeCTA/HomeCTA";
 
-const Hero = () => {
+const Home = () => {
   return (
-    <section id="hero" className="bg-linear-to-b from-accent to-background">
+    <section id="home" className="bg-linear-to-b from-accent to-background">
       <Container className="min-h-[calc(100vh-24*4px)] justify-center">
         <motion.div
           className="size-full"
@@ -15,11 +15,11 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <HeroHeading />
-          <HeroCTA />
+          <HomeHeading />
+          <HomeCTA />
         </motion.div>
       </Container>
     </section>
   );
 };
-export default Hero;
+export default Home;

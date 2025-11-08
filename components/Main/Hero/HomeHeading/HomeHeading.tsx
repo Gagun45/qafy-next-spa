@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaTools } from "react-icons/fa";
 
-const HeroHeading = () => {
+const HomeHeading = () => {
   return (
     <>
       <motion.div
@@ -27,4 +27,4 @@ const HeroHeading = () => {
     </>
   );
 };
-export default HeroHeading;
+export default HomeHeading;
