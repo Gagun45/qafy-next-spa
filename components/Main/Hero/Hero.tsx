@@ -8,7 +8,7 @@ import HeroCTA from "./HeroCTA/HeroCTA";
 const Hero = () => {
   return (
     <section id="hero" className="bg-linear-to-b from-accent to-background">
-      <Container className="min-h-[calc(100vh-24*4px)] flex flex-col items-center justify-center">
+      <Container className="min-h-[calc(100vh-24*4px)] justify-center">
         <motion.div
           className="size-full"
           initial={{ opacity: 0, y: -40 }}

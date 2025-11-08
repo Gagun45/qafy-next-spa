@@ -5,3 +5,9 @@ export interface Service {
   title: string;
   desc: string;
 }
+
+export interface Reason {
+  icon: JSX.Element;
+  title: string;
+  desc: string;
+}

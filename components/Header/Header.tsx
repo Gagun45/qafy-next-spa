@@ -18,7 +18,7 @@ const Header = () => {
   }, []);
   return (
     <header className={`${scrolled&&'outline outline-foreground'} w-full bg-accent h-24 sticky top-0 z-10`}>
-      <Container className="flex items-center gap-4">
+      <Container className="flex-row gap-4">
         <span>Qafy Mobile</span>
         <ThemeToggle />
         <SmoothLink to="hero" spy={true}>

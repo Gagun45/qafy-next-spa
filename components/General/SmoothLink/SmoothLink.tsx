@@ -27,7 +27,7 @@ const SmoothLink = ({
       tabIndex={0}
       role="link"
       onKeyDown={(e) => {
-        if (e.key === "Enter") {
+        if (e.key === "Enter" || e.key === " ") {
           e.preventDefault(); // prevent page scroll for Space
           onClick?.(); // just close menu
           e.currentTarget.click(); // trigger react-scroll navigation
