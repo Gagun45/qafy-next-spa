@@ -6,7 +6,7 @@ import ServicesGrid from "./ServicesGrid/ServicesGrid";
 
 const Services = () => {
   return (
-    <section>
+    <section id="services">
       <Container className="flex flex-col items-center">
         <ServicesHeading />
         <ServicesGrid />
