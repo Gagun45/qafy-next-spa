@@ -34,7 +34,7 @@ export default async function RootLayout({ children, params }: Props) {
     notFound();
   }
   return (
-    <html lang="en">
+    <html lang={locale} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
