@@ -44,7 +44,7 @@ const TestimonialCard = ({ review, index }: Props) => {
       {text && (
         <p className="text-sm text-justify text-foreground mb-1">{text}</p>
       )}
-      <p className="text-xs text-muted-foreground">
+      <p className="text-xs text-right">
         {relativePublishTimeDescription}
       </p>
     </motion.div>
