@@ -20,18 +20,19 @@ export const SendRequest = async (
     const { name, contact, message } = parsed.data;
     // 1. Filter out empty strings or non-File entries
     const files: File[] = images.filter(
-      (value): value is File => value instanceof File && value.size > 0
+      (value): value is File =>
+        value instanceof File &&
+        value.type.startsWith("image/") &&
+        value.size > 0
     );
 
     const attachments = await Promise.all(
-      files
-        .filter((file) => file.type.startsWith("image/"))
-        .map(async (file) => ({
-          filename: file.name,
-          content: Buffer.from(await file.arrayBuffer()).toString("base64"),
-        }))
+      files.map(async (file) => ({
+        filename: file.name,
+        content: Buffer.from(await file.arrayBuffer()).toString("base64"),
+      }))
     );
-    const safeHtml = `
+    const html = `
         <h2>Contact Request</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Contacts:</strong> ${contact}</p>
@@ -41,7 +42,7 @@ export const SendRequest = async (
       from: "Qafy Mobile <denys@qafy.info>",
       to: process.env.TO_EMAIL!,
       subject: `New request from Qafy Mobile`,
-      html: safeHtml,
+      html,
       attachments,
     });
     if (error) {
