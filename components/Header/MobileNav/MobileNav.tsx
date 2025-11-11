@@ -3,6 +3,7 @@ import SmoothLink from "@/components/General/SmoothLink/SmoothLink";
 import ThemeToggle from "@/components/General/ThemeToggle/ThemeToggle";
 import { LINKS } from "@/lib/constants";
 import { AnimatePresence, motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 import { scrollSpy } from "react-scroll";
 
@@ -12,6 +13,7 @@ interface Props {
 }
 
 const MobileNav = ({ closeMenu, menuOpen }: Props) => {
+  const t = useTranslations("NavLinks");
   useEffect(() => {
     scrollSpy.update();
   });
@@ -34,7 +36,7 @@ const MobileNav = ({ closeMenu, menuOpen }: Props) => {
                   spy={true}
                   className="hover:underline"
                 >
-                  {link.label}
+                  {t(`${link.href}`)}
                 </SmoothLink>
               </li>
             ))}

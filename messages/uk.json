@@ -1,5 +1,9 @@
 {
-  "HomePage": {
-    "title": "Привіт, світ!"
+  "NavLinks": {
+    "home": "Головна",
+    "services": "Послуги",
+    "whyus": "Чому ми?",
+    "testimonials": "Відгуки",
+    "contacts": "Контакти"
   }
 }

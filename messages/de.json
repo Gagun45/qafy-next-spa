@@ -1,5 +1,9 @@
 {
-  "HomePage": {
-    "title": "Hello world!"
+  "NavLinks": {
+    "home": "Startseite",
+    "services": "Dienstleistungen",
+    "whyus": "Warum wir?",
+    "testimonials": "Kundenstimmen",
+    "contacts": "Kontakt"
   }
 }

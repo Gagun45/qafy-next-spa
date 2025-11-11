@@ -11,7 +11,7 @@ const MobileMenuToggle = ({ menuOpen, toggleMenu }: Props) => {
     <Button
       onClick={toggleMenu}
       variant={"ghost"}
-      className="md:hidden p-0! aspect-square"
+      className="lg:hidden p-0! aspect-square"
     >
       {menuOpen ? <X className="size-8" /> : <Menu className="size-8" />}
     </Button>

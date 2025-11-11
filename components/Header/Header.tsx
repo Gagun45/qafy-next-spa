@@ -39,7 +39,7 @@ const Header = () => {
       <Container className="flex-row justify-between gap-4">
         <div className="flex items-center gap-4">
           <SmoothLink to="home" className="text-3xl tracking-widest font-serif">Qafy Mobile</SmoothLink>
-          <div className="md:flex items-center gap-4 hidden">
+          <div className="lg:flex items-center gap-4 hidden">
             <ThemeToggle />
             <LocaleSwitcher />
           </div>
