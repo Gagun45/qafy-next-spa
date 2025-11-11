@@ -39,15 +39,8 @@ const ContactForm = () => {
     setError(null);
     setSuccess(null);
     try {
-      const formData = new FormData();
-      const { contact, message, name } = values;
-      formData.append("name", name);
-      formData.append("contact", contact);
-      formData.append("message", message);
-      files.forEach((file) => {
-        formData.append("images", file);
-      });
-      const res = await SendRequest(formData);
+
+      const res = await SendRequest(values, files);
       if (!res.success) throw new Error();
       setSuccess("Request sent successfully!");
       formReset();
@@ -71,6 +64,7 @@ const ContactForm = () => {
             <Input
               ref={fileInputRef}
               type="file"
+              accept="image/*"
               multiple
               onChange={(e) => {
                 if (e.target.files) setFiles(Array.from(e.target.files));
