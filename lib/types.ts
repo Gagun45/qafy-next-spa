@@ -28,3 +28,14 @@ export interface AttachmentInterface {
   filename: string;
   path: string;
 }
+
+export interface Review {
+  name: string;
+  rating: number;
+  originalText?: { text: string; languageCode: string };
+  relativePublishTimeDescription: string;
+  authorAttribution: {
+    displayName: string;
+    photoUri?: string;
+  };
+}
