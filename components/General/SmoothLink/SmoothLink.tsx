@@ -34,7 +34,7 @@ const SmoothLink = ({
         }
       }}
       activeClass="text-primary"
-      className={`${className} cursor-pointer underline-offset-2`}
+      className={`${className} cursor-pointer font-medium`}
     >
       {children}
     </Link>

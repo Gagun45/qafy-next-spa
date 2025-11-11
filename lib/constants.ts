@@ -8,9 +8,9 @@ export const LINKS: LINK[] = [
   { href: "services", label: "Services" },
   { href: "whyus", label: "Why us" },
   //   { href: "about", label: "About" },
-  //   { href: "testimonials", label: "Testimonials" },
+  { href: "testimonials", label: "Testimonials" },
   //   { href: "pricing", label: "Pricing" },
-  //   { href: "contact", label: "Contact" },
+  { href: "contacts", label: "Contacts" },
 ];
 
 export const CONTACTS_SOCIAL: Contact[] = [

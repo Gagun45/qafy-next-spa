@@ -10,8 +10,8 @@ const MainPage = () => {
       <Hero />
       <Services />
       <WhyUs />
-      <Contacts />
       <Testimonials />
+      <Contacts />
     </main>
   );
 };
