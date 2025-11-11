@@ -7,6 +7,8 @@ import { scrollSpy } from "react-scroll";
 import DesktopNav from "./DesktopNav/DesktopNav";
 import MobileMenuToggle from "./MobileMenuToggle/MobileMenuToggle";
 import MobileNav from "./MobileNav/MobileNav";
+import LocaleSwitcher from "../General/LocaleSwitcher/LocaleSwitcher";
+import SmoothLink from "../General/SmoothLink/SmoothLink";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -35,9 +37,12 @@ const Header = () => {
       } w-full bg-accent h-24 sticky top-0 z-10`}
     >
       <Container className="flex-row justify-between gap-4">
-        <div className="flex items-center gap-2">
-          <span>Qafy Mobile</span>
-          <ThemeToggle />
+        <div className="flex items-center gap-4">
+          <SmoothLink to="home" className="text-3xl tracking-widest font-serif">Qafy Mobile</SmoothLink>
+          <div className="md:flex items-center gap-4 hidden">
+            <ThemeToggle />
+            <LocaleSwitcher />
+          </div>
         </div>
         <DesktopNav />
         <MobileMenuToggle menuOpen={menuOpen} toggleMenu={toggleMenu} />
