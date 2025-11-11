@@ -7,7 +7,7 @@ import QuickLinks from "./QuickLinks/QuickLinks";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-linear-to-b border-t from-background to-accent">
+    <footer className="w-full bg-linear-to-b border-t border-t-foreground from-background to-accent">
       <Container className="grid md:grid-cols-3 py-12 gap-10 md:text-left text-center">
         <FooterText />
         <QuickLinks />
