@@ -25,16 +25,16 @@ const MobileNav = ({ closeMenu, menuOpen }: Props) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.15 }}
-          className="lg:hidden bg-muted border-b border-foreground backdrop-blur-md px-6 pb-6 absolute top-24 w-full -z-10!"
+          className="lg:hidden bg-linear-to-b from-accent to-background border-b border-foreground backdrop-blur-md px-6 pb-6 absolute top-24 w-full -z-10!"
         >
-          <ul className="flex flex-col space-y-4 tracking-wider py-4 items-center">
+          <ul className="flex flex-col space-y-6 tracking-wider pb-6 items-center">
             {LINKS.map((link) => (
               <li key={link.href}>
                 <SmoothLink
                   onClick={closeMenu}
                   to={link.href}
                   spy={true}
-                  className="hover:underline"
+                  className="hover:underline text-lg"
                 >
                   {t(`${link.href}`)}
                 </SmoothLink>
