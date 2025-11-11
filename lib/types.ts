@@ -23,3 +23,8 @@ export interface Contact {
   icon: IconType;
   label: string;
 }
+
+export interface AttachmentInterface {
+  filename: string;
+  path: string;
+}

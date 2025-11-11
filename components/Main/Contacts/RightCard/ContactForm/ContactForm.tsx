@@ -9,6 +9,7 @@ import { useRef, useState } from "react";
 import NameInput from "./NameInput/NameInput";
 import ContactInput from "./ContactInput/ContactInput";
 import MessageTextarea from "./MessageTextarea/MessageTextarea";
+import { SendRequest } from "@/actions/actions.contact";
 
 const ContactForm = () => {
   const [loading, setLoading] = useState(false);
@@ -34,33 +35,27 @@ const ContactForm = () => {
   };
 
   const onSubmit = async (values: ContactFormType) => {
-    console.log(values);
-    // setLoading(true);
-    // setError(null);
-    // setSuccess(null);
-    // try {
-    //   const formData = new FormData();
-    //   const { contact, message, name } = values;
-    //   formData.append("name", name);
-    //   formData.append("contact", contact);
-    //   formData.append("message", message);
-    //   files.forEach((file) => {
-    //     formData.append("files", file);
-    //   });
-    //   const res = await fetch(`${BACKEND_BASE_URL}/api/contact`, {
-    //     method: "POST",
-    //     body: formData,
-    //   });
-    //   if (!res.ok) {
-    //     throw new Error();
-    //   }
-    //   setSuccess("Request sent successfully!");
-    //   formReset();
-    // } catch {
-    //   setError("Something went wrong");
-    // } finally {
-    //   setLoading(false);
-    // }
+    setLoading(true);
+    setError(null);
+    setSuccess(null);
+    try {
+      const formData = new FormData();
+      const { contact, message, name } = values;
+      formData.append("name", name);
+      formData.append("contact", contact);
+      formData.append("message", message);
+      files.forEach((file) => {
+        formData.append("images", file);
+      });
+      const res = await SendRequest(formData);
+      if (!res.success) throw new Error();
+      setSuccess("Request sent successfully!");
+      formReset();
+    } catch {
+      setError("Something went wrong");
+    } finally {
+      setLoading(false);
+    }
   };
   return (
     <Form {...form}>
