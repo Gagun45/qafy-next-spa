@@ -64,5 +64,15 @@
       }
     }
   },
+  "Testimonials": {
+    "TestimonialsHeading": {
+      "title": "Was unsere Kunden sagen",
+      "subtitle": "Echtes Feedback von Menschen, die uns ihre Geräte anvertraut haben."
+    },
+    "TestimonialsLinks": {
+      "viewAll": "Alle ansehen",
+      "leaveTestimonial": "Eine Bewertung hinterlassen"
+    }
+  },
   "GincoreWidgetBtn": "Reparaturstatus prüfen"
 }

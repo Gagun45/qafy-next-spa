@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const TestimonialsHeading = () => {
+  const t = useTranslations("Testimonials.TestimonialsHeading");
+  const title = t("title");
+  const subtitle = t("subtitle");
   return (
     <>
       <motion.h2
@@ -9,16 +13,16 @@ const TestimonialsHeading = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        What Our Clients Say
+        {title}
       </motion.h2>
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ delay: 0.2 }}
-        className="max-w-2xl mx-auto"
+        className="sectionSubtitle"
       >
-        Real feedback from people who trusted us with their devices.
+        {subtitle}
       </motion.p>
     </>
   );

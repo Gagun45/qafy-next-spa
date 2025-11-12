@@ -64,5 +64,15 @@
       }
     }
   },
+  "Testimonials": {
+    "TestimonialsHeading": {
+      "title": "Що кажуть наші клієнти",
+      "subtitle": "Реальні відгуки людей, які довірили нам свої пристрої."
+    },
+    "TestimonialsLinks": {
+      "viewAll": "Переглянути всі",
+      "leaveTestimonial": "Залишити відгук"
+    }
+  },
   "GincoreWidgetBtn": "Перевірити статус ремонту"
 }

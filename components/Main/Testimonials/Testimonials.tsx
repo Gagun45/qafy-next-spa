@@ -3,7 +3,7 @@
 import Container from "@/components/General/Container/Container";
 import TestimonialsHeading from "./TestimonialsHeading/TestimonialsHeading";
 import TestimonialsContainer from "./TestimonialsContainer/TestimonialsContainer";
-import TestimonialLinks from "./TestimonialsLinks/TestimonialsLinks";
+import TestimonialsLinks from "./TestimonialsLinks/TestimonialsLinks";
 
 const Testimonials = () => {
   return (
@@ -11,7 +11,7 @@ const Testimonials = () => {
       <Container className="space-y-6">
         <TestimonialsHeading />
         <TestimonialsContainer />
-        <TestimonialLinks />
+        <TestimonialsLinks />
       </Container>
     </section>
   );

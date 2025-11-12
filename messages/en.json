@@ -64,5 +64,15 @@
       }
     }
   },
+  "Testimonials": {
+    "TestimonialsHeading": {
+      "title": "What Our Clients Say",
+      "subtitle": "Real feedback from people who trusted us with their devices."
+    },
+    "TestimonialsLinks": {
+      "viewAll": "View all",
+      "leaveTestimonial": "Leave a testimonial"
+    }
+  },
   "GincoreWidgetBtn": "Check repair status"
 }
