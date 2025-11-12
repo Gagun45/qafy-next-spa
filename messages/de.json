@@ -11,6 +11,10 @@
       "titleFirst": "Schnelle & Zuverlässige",
       "titleSecond": "PC- & Handyreparatur",
       "subtitle": "Wir reparieren alle bekannten Marken — Service am selben Tag verfügbar. Vertraut von Hunderten zufriedener Kunden."
+    },
+    "HomeCTA": {
+      "secondaryCTA": "Kostenloses Angebot"
     }
-  }
+  },
+  "GincoreWidgetBtn": "Reparaturstatus prüfen"
 }

@@ -135,7 +135,7 @@
 
 @layer components {
   .ctaBtn {
-    @apply py-6! text-lg! transition-colors! rounded-xl! font-semibold! w-full sm:max-w-64
+    @apply py-6! text-lg! transition-colors! rounded-xl! font-semibold! w-full sm:max-w-1/2
   }
   .sectionSubtitle {
     @apply max-w-3xl mx-auto mb-12

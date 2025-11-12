@@ -11,6 +11,10 @@
       "titleFirst": "Fast & Reliable",
       "titleSecond": "PC & Phone Repair",
       "subtitle": "We fix all major brands — same day service available. Trusted by hundreds of happy customers."
+    },
+    "HomeCTA": {
+      "secondaryCTA": "Free Quote"
     }
-  }
+  },
+  "GincoreWidgetBtn": "Check repair status"
 }
