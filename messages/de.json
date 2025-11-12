@@ -78,6 +78,12 @@
     "LeftCard": {
       "title": "Kontaktieren Sie uns",
       "subtitle": "Benötigen Sie eine Reparatur oder möchten Sie den Preis wissen? Sie können uns über die unten angegebenen Kontaktinformationen erreichen oder das Formular ausfüllen, und wir melden uns in Kürze bei Ihnen."
+    },
+    "FormFields": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Max Mustermann"
+      }
     }
   },
   "GincoreWidgetBtn": "Reparaturstatus prüfen"
