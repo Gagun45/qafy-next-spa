@@ -3,8 +3,7 @@ import type { IconType } from "react-icons";
 
 export interface Service {
   icon: JSX.Element;
-  title: string;
-  desc: string;
+  transKey: string;
 }
 
 export interface Reason {

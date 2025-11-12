@@ -20,6 +20,24 @@
     "ServicesHeading": {
       "title": "Unsere <primary>Reparaturdienste</primary>",
       "subtitle": "Ob gesprungener Bildschirm, langsamer Laptop oder Akku-Problem — wir bringen Ihr Gerät schnell und professionell wieder zum Laufen."
+    },
+    "Services": {
+      "phone": {
+        "title": "Smartphone-Reparatur",
+        "desc": "Bildschirme, Kameras, Ladeanschlüsse und mehr. Wir reparieren alle bekannten Marken."
+      },
+      "laptop": {
+        "title": "Laptop- & PC-Reparatur",
+        "desc": "Hardware- und Softwarediagnose, Aufrüstungen und Reinigung."
+      },
+      "battery": {
+        "title": "Akkutausch",
+        "desc": "Schnelle und zuverlässige Ersetzungen mit hochwertigen Akkus."
+      },
+      "data": {
+        "title": "Datenwiederherstellung",
+        "desc": "Stellen Sie verlorene Daten sicher und zuverlässig von jedem Gerät wieder her."
+      }
     }
   },
   "GincoreWidgetBtn": "Reparaturstatus prüfen"

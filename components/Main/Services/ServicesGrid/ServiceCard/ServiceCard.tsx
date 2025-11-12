@@ -1,5 +1,6 @@
 import type { Service } from "@/lib/types";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 interface Props {
   service: Service;
@@ -7,10 +8,12 @@ interface Props {
 }
 
 const ServiceCard = ({ index, service }: Props) => {
-  const { desc, icon, title } = service;
+  const { icon, transKey } = service;
+  const t = useTranslations("Services.Services");
+  const title = t(`${transKey}.title`);
+  const desc = t(`${transKey}.desc`);
   return (
     <motion.div
-      key={title}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ delay: index * 0.15 }}

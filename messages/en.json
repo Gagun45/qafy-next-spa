@@ -20,6 +20,24 @@
     "ServicesHeading": {
       "title": "Our <primary>Repair Services</primary>",
       "subtitle": "Whether it`s a cracked screen, slow laptop, or battery issue — we`ll bring your device back to life quickly and professionally."
+    },
+    "Services": {
+      "phone": {
+        "title": "Smartphone Repair",
+        "desc": "Screens, cameras, charging ports, and more. We fix all major brands."
+      },
+      "laptop": {
+        "title": "Laptop & PC Repair",
+        "desc": "Hardware and software diagnostics, upgrades, and cleaning."
+      },
+      "battery": {
+        "title": "Battery Replacement",
+        "desc": "Fast and reliable replacements with high-quality batteries."
+      },
+      "data": {
+        "title": "Data Recovery",
+        "desc": "Recover your lost data safely and securely from any device."
+      }
     }
   },
   "GincoreWidgetBtn": "Check repair status"
