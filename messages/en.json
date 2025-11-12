@@ -74,5 +74,11 @@
       "leaveTestimonial": "Leave a testimonial"
     }
   },
+  "Contacts": {
+    "LeftCard": {
+      "title": "Contact us",
+      "subtitle": "Need a repair or want to know the price? You can reach us using the contact information below or fill out the form and we’ll get back to you shortly."
+    }
+  },
   "GincoreWidgetBtn": "Check repair status"
 }
