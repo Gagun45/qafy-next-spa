@@ -16,5 +16,11 @@
       "secondaryCTA": "Kostenloses Angebot"
     }
   },
+  "Services": {
+    "ServicesHeading": {
+      "title": "Unsere <primary>Reparaturdienste</primary>",
+      "subtitle": "Ob gesprungener Bildschirm, langsamer Laptop oder Akku-Problem — wir bringen Ihr Gerät schnell und professionell wieder zum Laufen."
+    }
+  },
   "GincoreWidgetBtn": "Reparaturstatus prüfen"
 }

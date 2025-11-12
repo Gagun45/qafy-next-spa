@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const ServicesHeading = () => {
+  const t = useTranslations("Services.ServicesHeading");
+  const title = t.rich("title", {
+    primary: (chunk) => <span className="text-primary">{chunk}</span>,
+  });
   return (
     <>
       <motion.h2
@@ -9,7 +14,7 @@ const ServicesHeading = () => {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        Our <span className="text-primary">Repair Services</span>
+        {title}
       </motion.h2>
       <motion.p
         initial={{ opacity: 0, y: 10 }}
@@ -18,8 +23,7 @@ const ServicesHeading = () => {
         viewport={{ once: true }}
         className="sectionSubtitle"
       >
-        Whether it&apos;s a cracked screen, slow laptop, or battery issue —
-        we’ll bring your device back to life quickly and professionally.
+        {t('subtitle')}
       </motion.p>
     </>
   );

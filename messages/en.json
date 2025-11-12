@@ -16,5 +16,11 @@
       "secondaryCTA": "Free Quote"
     }
   },
+  "Services": {
+    "ServicesHeading": {
+      "title": "Our <primary>Repair Services</primary>",
+      "subtitle": "Whether it`s a cracked screen, slow laptop, or battery issue — we`ll bring your device back to life quickly and professionally."
+    }
+  },
   "GincoreWidgetBtn": "Check repair status"
 }
