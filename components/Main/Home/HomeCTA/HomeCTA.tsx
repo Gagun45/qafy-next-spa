@@ -1,4 +1,5 @@
-import { Button } from "@/components/ui/button";
+import SmoothLink from "@/components/General/SmoothLink/SmoothLink";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
 const HomeCTA = () => {
@@ -10,9 +11,15 @@ const HomeCTA = () => {
       className="flex flex-col sm:flex-row gap-4 items-center justify-center"
     >
       <Button className="ctaBtn">Check repair status</Button>
-      <Button className="ctaBtn" variant={'secondary'}>
+      <SmoothLink
+        to="contacts"
+        className={buttonVariants({
+          className: "ctaBtn",
+          variant: "secondary",
+        })}
+      >
         Get a Free Quote
-      </Button>
+      </SmoothLink>
       {/* <WidgetTrigger className="bg-primary hover:bg-primary/95 ctaBtn" />
 
       <SmoothLink
