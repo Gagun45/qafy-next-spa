@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { FaTools } from "react-icons/fa";
 
 const HomeHeading = () => {
+  const t = useTranslations('Home.HomeHeading')
   return (
     <>
       <motion.div
@@ -15,14 +17,13 @@ const HomeHeading = () => {
 
       {/* Title */}
       <h1 className="text-4xl sm:text-6xl text-center font-bold leading-tight mb-4">
-        Fast & Reliable <br />
-        <span className="text-primary">PC & Phone Repair</span>
+        {t('titleFirst')} <br />
+        <span className="text-primary">{t('titleSecond')}</span>
       </h1>
 
       {/* Subtitle */}
       <p className="text-lg sm:text-xl mb-8 text-center">
-        We fix all major brands — same day service available. Trusted by
-        hundreds of happy customers.
+        {t('subtitle')}
       </p>
     </>
   );

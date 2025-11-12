@@ -5,5 +5,12 @@
     "whyus": "Warum wir?",
     "testimonials": "Kundenstimmen",
     "contacts": "Kontakt"
+  },
+  "Home": {
+    "HomeHeading": {
+      "titleFirst": "Schnelle & Zuverlässige",
+      "titleSecond": "PC- & Handyreparatur",
+      "subtitle": "Wir reparieren alle bekannten Marken — Service am selben Tag verfügbar. Vertraut von Hunderten zufriedener Kunden."
+    }
   }
 }
