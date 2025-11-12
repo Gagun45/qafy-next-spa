@@ -1,6 +1,12 @@
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const WhyUsHeading = () => {
+  const t = useTranslations("WhyUs.WhyUsHeading");
+  const title = t.rich("title", {
+    primary: (chunk) => <span className="text-primary">{chunk}</span>,
+  });
+  const subtitle = t("subtitle");
   return (
     <>
       <motion.h2
@@ -9,7 +15,7 @@ const WhyUsHeading = () => {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        Why <span className="text-primary">Choose Us</span>
+        {title}
       </motion.h2>
 
       <motion.p
@@ -19,8 +25,7 @@ const WhyUsHeading = () => {
         viewport={{ once: true }}
         className="sectionSubtitle"
       >
-        With years of experience and a passion for technology, we provide the
-        best repair service in town — fast, reliable, and transparent.
+        {subtitle}
       </motion.p>
     </>
   );

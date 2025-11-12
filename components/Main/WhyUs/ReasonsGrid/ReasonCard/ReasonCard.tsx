@@ -1,5 +1,6 @@
 import type { Reason } from "@/lib/types";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 interface Props {
   feature: Reason;
@@ -7,10 +8,12 @@ interface Props {
 }
 
 const ReasonCard = ({ index, feature }: Props) => {
-  const { desc, icon, title } = feature;
+  const { icon, transKey } = feature;
+    const t = useTranslations("WhyUs.Reasons");
+    const title = t(`${transKey}.title`);
+    const desc = t(`${transKey}.desc`);
   return (
     <motion.div
-      key={title}
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.15 }}

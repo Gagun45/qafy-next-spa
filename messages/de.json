@@ -40,5 +40,29 @@
       }
     }
   },
+  "WhyUs": {
+    "WhyUsHeading": {
+      "title": "Warum <primary>uns wählen</primary>",
+      "subtitle": "Mit jahrelanger Erfahrung und Leidenschaft für Technologie bieten wir den besten Reparaturservice in der Stadt — schnell, zuverlässig und transparent."
+    },
+    "Reasons": {
+      "warranty": {
+        "title": "Garantie auf alle Reparaturen",
+        "desc": "Wir stehen hinter unserer Arbeit. Jede Reparatur wird mit einer Garantie für Ihre Sicherheit geliefert."
+      },
+      "fast": {
+        "title": "Schnelle Bearbeitung",
+        "desc": "Die meisten Geräte werden am selben Tag repariert, sodass Sie schnell wieder weitermachen können."
+      },
+      "certified": {
+        "title": "Zertifizierte Techniker",
+        "desc": "Unsere Experten sind geschult, alle bekannten Marken und Modelle sorgfältig zu behandeln."
+      },
+      "quality": {
+        "title": "Hochwertige Teile",
+        "desc": "Wir verwenden nur Premium-Komponenten, damit Ihr Gerät wieder wie neu funktioniert."
+      }
+    }
+  },
   "GincoreWidgetBtn": "Reparaturstatus prüfen"
 }

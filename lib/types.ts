@@ -8,8 +8,7 @@ export interface Service {
 
 export interface Reason {
   icon: JSX.Element;
-  title: string;
-  desc: string;
+  transKey: string;
 }
 
 export interface LINK {
