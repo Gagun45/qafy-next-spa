@@ -105,5 +105,10 @@
       "error": "Fehler: Etwas ist schiefgelaufen"
     }
   },
+  "Footer": {
+    "FooterText": {
+      "desc": "Schneller und zuverlässiger Reparaturservice für Handys, PCs und Laptops. Ihre Technik, wieder zum Leben erweckt ⚡"
+    }
+  },
   "GincoreWidgetBtn": "Reparaturstatus prüfen"
 }

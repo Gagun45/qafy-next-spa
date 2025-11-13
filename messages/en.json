@@ -105,5 +105,10 @@
       "error": "Error: Something went wrong"
     }
   },
+  "Footer": {
+    "FooterText": {
+      "desc": "Fast and reliable repair service for phones, PCs, and laptops. Your tech, restored to life ⚡"
+    }
+  },
   "GincoreWidgetBtn": "Check repair status"
 }
