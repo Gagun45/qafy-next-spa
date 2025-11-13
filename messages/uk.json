@@ -83,6 +83,14 @@
       "name": {
         "label": "Ім’я",
         "placeholder": "Пес Патрон"
+      },
+      "contact": {
+        "label": "Контактна інформація",
+        "placeholder": "WhatsApp, Telegram, електронна пошта тощо"
+      },
+      "message": {
+        "label": "Опишіть проблему",
+        "placeholder": "Екран тріснув, не вмикається, потрапила вода..."
       }
     }
   },

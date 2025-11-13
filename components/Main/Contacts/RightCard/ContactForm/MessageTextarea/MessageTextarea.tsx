@@ -7,19 +7,23 @@ import {
 } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
 import type { ContactFormType } from "@/lib/zod-schemas";
+import { useTranslations } from "next-intl";
 import { useFormContext } from "react-hook-form";
 
 const MessageTextarea = () => {
   const { control } = useFormContext<ContactFormType>();
+  const t = useTranslations("Contacts.FormFields.message");
+  const label = t("label");
+  const placeholder = t("placeholder");
   return (
     <FormField
       control={control}
       name="message"
       render={({ field }) => (
         <FormItem>
-          <FormLabel>Describe the problem</FormLabel>
+          <FormLabel>{label}</FormLabel>
           <FormControl>
-            <Textarea placeholder="Screen cracked, doesn`t turn on, water damage..." {...field} />
+            <Textarea placeholder={placeholder} {...field} />
           </FormControl>
           <FormMessage />
         </FormItem>

@@ -83,6 +83,14 @@
       "name": {
         "label": "Name",
         "placeholder": "John Doe"
+      },
+      "contact": {
+        "label": "Contact information",
+        "placeholder": "WhatsApp, Telegram, email, etc."
+      },
+      "message": {
+        "label": "Describe the problem",
+        "placeholder": "Screen cracked, doesn`t turn on, water damage..."
       }
     }
   },

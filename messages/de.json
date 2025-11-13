@@ -83,6 +83,14 @@
       "name": {
         "label": "Name",
         "placeholder": "Max Mustermann"
+      },
+      "contact": {
+        "label": "Kontaktinformationen",
+        "placeholder": "WhatsApp, Telegram, E-Mail usw."
+      },
+      "message": {
+        "label": "Beschreiben Sie das Problem",
+        "placeholder": "Bildschirm gesprungen, geht nicht an, Wasserschaden..."
       }
     }
   },
