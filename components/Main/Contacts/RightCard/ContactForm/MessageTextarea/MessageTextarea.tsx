@@ -12,7 +12,7 @@ import { useFormContext } from "react-hook-form";
 
 const MessageTextarea = () => {
   const { control } = useFormContext<ContactFormType>();
-  const t = useTranslations("Contacts.FormFields.message");
+  const t = useTranslations("Contacts.ContactForm.FormFields.message");
   const label = t("label");
   const placeholder = t("placeholder");
   return (

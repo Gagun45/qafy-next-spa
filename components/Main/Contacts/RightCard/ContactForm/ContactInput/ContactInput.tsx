@@ -12,7 +12,7 @@ import { useFormContext } from "react-hook-form";
 
 const ContactInput = () => {
   const { control } = useFormContext<ContactFormType>();
-  const t = useTranslations("Contacts.FormFields.contact");
+  const t = useTranslations("Contacts.ContactForm.FormFields.contact");
   const label = t("label");
   const placeholder = t("placeholder");
   return (

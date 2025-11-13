@@ -2,16 +2,19 @@ import { contactFormSchema, type ContactFormType } from "@/lib/zod-schemas";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Form } from "@/components/ui/form";
-import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
 import { useRef, useState } from "react";
 import NameInput from "./NameInput/NameInput";
 import ContactInput from "./ContactInput/ContactInput";
 import MessageTextarea from "./MessageTextarea/MessageTextarea";
 import { SendRequest } from "@/actions/actions.contact";
+import ImageInput from "./ImageInput/ImageInput";
+import SubmitBtn from "./SubmitBtn/SubmitBtn";
+import { useTranslations } from "next-intl";
 
 const ContactForm = () => {
+  const t = useTranslations("Contacts.ContactForm");
+  const successMsg = t("success");
+  const errorMsg = t("error");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
@@ -39,13 +42,12 @@ const ContactForm = () => {
     setError(null);
     setSuccess(null);
     try {
-
       const res = await SendRequest(values, files);
       if (!res.success) throw new Error();
-      setSuccess("Request sent successfully!");
+      setSuccess(successMsg);
       formReset();
     } catch {
-      setError("Something went wrong");
+      setError(errorMsg);
     } finally {
       setLoading(false);
     }
@@ -57,25 +59,10 @@ const ContactForm = () => {
           <NameInput />
           <ContactInput />
           <MessageTextarea />
-          <Label className="flex flex-col gap-1 items-start">
-            <span>
-              Upload images <i>(optional, up to 5)</i>
-            </span>
-            <Input
-              ref={fileInputRef}
-              type="file"
-              accept="image/*"
-              multiple
-              onChange={(e) => {
-                if (e.target.files) setFiles(Array.from(e.target.files));
-              }}
-            />
-          </Label>
+          <ImageInput ref={fileInputRef} setFiles={setFiles} />
           {error && <p className="text-destructive">{error}</p>}
           {success && <p className="text-green-500">{success}</p>}
-          <Button className="w-full" type="submit">
-            {loading ? "Submitting..." : "Submit"}
-          </Button>
+          <SubmitBtn loading={loading} />
         </fieldset>
       </form>
     </Form>

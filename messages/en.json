@@ -79,19 +79,30 @@
       "title": "Contact us",
       "subtitle": "Need a repair or want to know the price? You can reach us using the contact information below or fill out the form and we’ll get back to you shortly."
     },
-    "FormFields": {
-      "name": {
-        "label": "Name",
-        "placeholder": "John Doe"
+    "ContactForm": {
+      "FormFields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "John Doe"
+        },
+        "contact": {
+          "label": "Contact information",
+          "placeholder": "WhatsApp, Telegram, email, etc."
+        },
+        "message": {
+          "label": "Describe the problem",
+          "placeholder": "Screen cracked, doesn`t turn on, water damage..."
+        },
+        "images": {
+          "label": "Upload images <i>(optional, up to 5)</i>"
+        }
       },
-      "contact": {
-        "label": "Contact information",
-        "placeholder": "WhatsApp, Telegram, email, etc."
+      "submitBtn": {
+        "submitting": "Submitting...",
+        "submit": "Submit"
       },
-      "message": {
-        "label": "Describe the problem",
-        "placeholder": "Screen cracked, doesn`t turn on, water damage..."
-      }
+      "success": "Request sent successfully!",
+      "error": "Error: Something went wrong"
     }
   },
   "GincoreWidgetBtn": "Check repair status"
