@@ -108,6 +108,12 @@
   "Footer": {
     "FooterText": {
       "desc": "Schneller und zuverlässiger Reparaturservice für Handys, PCs und Laptops. Ihre Technik, wieder zum Leben erweckt ⚡"
+    },
+    "QuickLinks": {
+      "title": "Schnellzugriff"
+    },
+    "GetInTouch": {
+      "title": "Kontakt aufnehmen"
     }
   },
   "GincoreWidgetBtn": "Reparaturstatus prüfen"

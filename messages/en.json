@@ -108,6 +108,12 @@
   "Footer": {
     "FooterText": {
       "desc": "Fast and reliable repair service for phones, PCs, and laptops. Your tech, restored to life ⚡"
+    },
+    "QuickLinks": {
+      "title": "Quick Links"
+    },
+    "GetInTouch": {
+      "title": "Get in Touch"
     }
   },
   "GincoreWidgetBtn": "Check repair status"

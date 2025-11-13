@@ -1,9 +1,12 @@
 import { CONTACTS_GENERAL, CONTACTS_SOCIAL } from "@/lib/constants";
+import { useTranslations } from "next-intl";
 
-const FooterContacts = () => {
+const GetInTouch = () => {
+  const t = useTranslations("Footer.GetInTouch");
+  const title = t("title");
   return (
     <div className="space-y-4 h-full">
-      <h4 className="text-lg font-semibold mb-4">Get in Touch</h4>
+      <h4 className="text-lg font-semibold mb-4">{title}</h4>
       <ul className="space-y-4">
         {CONTACTS_GENERAL.map((contact) => (
           <li
@@ -42,4 +45,4 @@ const FooterContacts = () => {
     </div>
   );
 };
-export default FooterContacts;
+export default GetInTouch;

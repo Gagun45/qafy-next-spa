@@ -1,9 +1,9 @@
 'use client'
 
 import Container from "../General/Container/Container";
-import FooterContacts from "./FooterContacts/FooterContacts";
 import FooterText from "./FooterText/FooterText";
 import QuickLinks from "./QuickLinks/QuickLinks";
+import GetInTouch from "./GetInTouch/GetInTouch";
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
       <Container className="grid md:grid-cols-3 py-12 gap-10 md:text-left text-center">
         <FooterText />
         <QuickLinks />
-        <FooterContacts/>
+        <GetInTouch/>
       </Container>
     </footer>
   );
