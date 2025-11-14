@@ -3,7 +3,6 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
 } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
 import type { ContactFormType } from "@/lib/zod-schemas";
@@ -23,9 +22,8 @@ const MessageTextarea = () => {
         <FormItem>
           <FormLabel>{label}</FormLabel>
           <FormControl>
-            <Textarea placeholder={placeholder} {...field} />
+            <Textarea required placeholder={placeholder} {...field} />
           </FormControl>
-          <FormMessage />
         </FormItem>
       )}
     />

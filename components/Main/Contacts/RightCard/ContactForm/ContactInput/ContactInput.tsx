@@ -3,7 +3,6 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import type { ContactFormType } from "@/lib/zod-schemas";
@@ -23,9 +22,8 @@ const ContactInput = () => {
         <FormItem>
           <FormLabel>{label}</FormLabel>
           <FormControl>
-            <Input placeholder={placeholder} {...field} />
+            <Input required placeholder={placeholder} {...field} />
           </FormControl>
-          <FormMessage />
         </FormItem>
       )}
     />

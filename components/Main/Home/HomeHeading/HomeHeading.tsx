@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { FaTools } from "react-icons/fa";
+import Image from "next/image";
 
 const HomeHeading = () => {
   const t = useTranslations('Home.HomeHeading')
@@ -12,7 +12,7 @@ const HomeHeading = () => {
         transition={{ delay: 0.3, duration: 0.6 }}
         className="flex justify-center mb-6"
       >
-        <FaTools className="text-5xl text-primary" />
+        <Image src={'/pngegg.png'} width={250} height={250} alt="home"/>
       </motion.div>
 
       {/* Title */}

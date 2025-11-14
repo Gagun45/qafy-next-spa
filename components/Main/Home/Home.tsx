@@ -8,7 +8,7 @@ import HomeCTA from "./HomeCTA/HomeCTA";
 const Home = () => {
   return (
     <section id="home" className="bg-linear-to-b from-accent to-background">
-      <Container className="min-h-[calc(100vh-24*4px)] justify-center">
+      <Container className="min-h-[calc(100vh-24*4px)]">
         <motion.div
           className="size-full"
           initial={{ opacity: 0, y: -40 }}
