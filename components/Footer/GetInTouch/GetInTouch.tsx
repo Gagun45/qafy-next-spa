@@ -35,7 +35,11 @@ const GetInTouch = () => {
               : "text-whatsapp";
           return (
             <li key={contact.label} className={`cursor-pointer ${textColor}`}>
-              <a href={contact.href} target="_blank">
+              <a
+                href={contact.href}
+                target="_blank"
+                aria-label={`${contact.label} link`}
+              >
                 <contact.icon className="size-6" />
               </a>
             </li>

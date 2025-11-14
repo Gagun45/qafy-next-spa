@@ -31,27 +31,41 @@ export function generateMetadata({ params }: { params: { locale: Locale } }) {
 
   const t = localeMetadata[locale];
 
+  const base = siteConfig.url;
+  const currentUrl = `${base}/${locale}`;
+
   return {
-    metadataBase: new URL(siteConfig.url),
-    title: "Qafy Mobile",
+    metadataBase: new URL(base),
+
+    // Title
+    title: {
+      absolute: "Qafy Mobile",
+    },
+
+    // Description
     description: t.description,
+
+    // Icons
     icons: siteConfig.icons,
+
     creator: siteConfig.creator,
     generator: "Next.js",
 
+    // Canonical + Hreflangs  (GOOGLE-COMPLIANT)
     alternates: {
-      canonical: `${siteConfig.url}/${locale}`,
+      canonical: currentUrl,
       languages: {
-        en: `${siteConfig.url}/en`,
-        uk: `${siteConfig.url}/uk`,
-        de: `${siteConfig.url}/de`,
-        "x-default": siteConfig.url,
+        en: `${base}/en`,
+        uk: `${base}/uk`,
+        de: `${base}/de`,
+        "x-default": base,
       },
     },
 
+    // Open Graph
     openGraph: {
       type: "website",
-      url: `${siteConfig.url}/${locale}`,
+      url: currentUrl,
       title: "Qafy Mobile",
       description: t.description,
       siteName: siteConfig.name,
