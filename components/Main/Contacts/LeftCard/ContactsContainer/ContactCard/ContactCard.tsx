@@ -16,6 +16,7 @@ const ContactCard = ({ contact, iconColor }: Props) => {
         href={contact.href}
         target="_blank"
         className="flex items-center gap-2"
+        aria-label={`${contact.label} link`}
       >
         <contact.icon className={`${resIconColor} size-6`} /> {contact.label}
       </a>

@@ -31,7 +31,7 @@ const LocaleSwitcher = () => {
       value={currentLocale}
       onValueChange={(value) => handleLocaleChange(value)}
     >
-      <SelectTrigger className="w-fit bg-transparent!" aria-label={''}>
+      <SelectTrigger className="w-fit bg-transparent!" aria-label={'Choose language'}>
         <SelectValue />
       </SelectTrigger>
       <SelectContent align="end" className="w-fit min-w-0">

@@ -45,6 +45,7 @@ export function generateMetadata({ params }: { params: { locale: Locale } }) {
         en: `${siteConfig.url}/en`,
         uk: `${siteConfig.url}/uk`,
         de: `${siteConfig.url}/de`,
+        "x-default": siteConfig.url,
       },
     },
 
