@@ -11,8 +11,8 @@ const Home = () => {
       <Container className="min-h-[calc(100vh-24*4px)]">
         <motion.div
           className="size-full"
-          initial={{ opacity: 0, y: -40 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
           <HomeHeading />
