@@ -1,5 +1,3 @@
-'use client'
-
 import { buttonVariants } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 import Link from "next/link";

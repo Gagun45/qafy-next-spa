@@ -1,3 +1,5 @@
+"use client";
+
 import Container from "@/components/General/Container/Container";
 import TestimonialsHeading from "./TestimonialsHeading/TestimonialsHeading";
 import TestimonialsContainer from "./TestimonialsContainer/TestimonialsContainer";
