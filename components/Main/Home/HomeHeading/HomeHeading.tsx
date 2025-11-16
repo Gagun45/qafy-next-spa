@@ -10,6 +10,8 @@ const HomeHeading = () => {
         alt="Qafy Mobile Logo"
         className="mb-6 mx-auto"
         priority
+        width={250}
+        height={250}
         sizes="250px"
       />
 
