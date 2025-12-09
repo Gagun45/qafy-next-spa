@@ -9,6 +9,7 @@ import { ThemeProvider } from "@/providers/ThemeProvider";
 import { localeMetadata, siteConfig, type Locale } from "@/lib/metadata";
 import { setRequestLocale } from "next-intl/server";
 import GincoreWidget from "@/components/Widget/Widget";
+import {Metadata} from "next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,10 +25,14 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export function generateMetadata({ params }: { params: { locale: Locale } }) {
-  const locale = siteConfig.locales.includes(params.locale)
-    ? params.locale
-    : siteConfig.defaultLocale;
+export async function generateMetadata(
+    { params }: { params: Promise<{ locale: Locale }> }
+): Promise<Metadata> {
+  const { locale: paramLocale } = await params;
+
+  const locale = siteConfig.locales.includes(paramLocale)
+      ? paramLocale
+      : siteConfig.defaultLocale;
 
   const t = localeMetadata[locale];
 
@@ -37,21 +42,15 @@ export function generateMetadata({ params }: { params: { locale: Locale } }) {
   return {
     metadataBase: new URL(base),
 
-    // Title
     title: {
       absolute: "Qafy Mobile",
     },
 
-    // Description
     description: t.description,
-
-    // Icons
     icons: siteConfig.icons,
-
     creator: siteConfig.creator,
     generator: "Next.js",
 
-    // Canonical + Hreflangs  (GOOGLE-COMPLIANT)
     alternates: {
       canonical: currentUrl,
       languages: {
@@ -62,7 +61,6 @@ export function generateMetadata({ params }: { params: { locale: Locale } }) {
       },
     },
 
-    // Open Graph
     openGraph: {
       type: "website",
       url: currentUrl,
@@ -72,6 +70,7 @@ export function generateMetadata({ params }: { params: { locale: Locale } }) {
     },
   };
 }
+
 
 type Props = {
   children: React.ReactNode;
