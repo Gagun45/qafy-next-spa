@@ -1,3 +1,4 @@
+import { LucideIcon } from "lucide-react";
 import type { JSX } from "react";
 import type { IconType } from "react-icons";
 
@@ -37,3 +38,14 @@ export interface Review {
     photoUri?: string;
   };
 }
+
+export type PriceItem = {
+  label: string;
+  price: string;
+};
+
+export type PriceCategory = {
+  label: string;
+  icon: LucideIcon;
+  items: PriceItem[];
+};
