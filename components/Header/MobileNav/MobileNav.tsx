@@ -28,18 +28,20 @@ const MobileNav = ({ closeMenu, menuOpen }: Props) => {
           className="lg:hidden bg-linear-to-b from-accent to-background border-b border-foreground backdrop-blur-md px-6 pb-6 absolute top-24 w-full -z-10!"
         >
           <ul className="flex flex-col space-y-6 tracking-wider pb-6 items-center">
-            {LINKS.map((link) => (
-              <li key={link.href}>
-                <SmoothLink
-                  onClick={closeMenu}
-                  to={link.href}
-                  spy={true}
-                  className="hover:underline text-lg"
-                >
-                  {t(`${link.href}`)}
-                </SmoothLink>
-              </li>
-            ))}
+            {LINKS.map((link) => {
+              const isContact = link.label === "Contacts";
+              return (
+                <li key={link.href}>
+                  <SmoothLink
+                    onClick={closeMenu}
+                    to={link.href}
+                    className={` hover:underline text-lg ${isContact && "border px-4 py-2 rounded-lg border-foreground bg-foreground text-background"}`}
+                  >
+                    {t(`${link.href}`)}
+                  </SmoothLink>
+                </li>
+              );
+            })}
           </ul>
           <div className="flex items-center justify-center gap-8">
             <ThemeToggle />
