@@ -116,5 +116,11 @@
       "title": "Kontakt aufnehmen"
     }
   },
+  "Prices": {
+    "Sheet": {
+      "title": "Servicepreise",
+      "desc": "Die Preise verstehen sich ohne Teilekosten und können je nach Gerät variieren."
+    }
+  },
   "GincoreWidgetBtn": "Reparaturstatus prüfen"
 }

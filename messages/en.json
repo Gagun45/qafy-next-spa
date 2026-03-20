@@ -116,5 +116,11 @@
       "title": "Get in Touch"
     }
   },
+  "Prices": {
+    "Sheet": {
+      "title": "Service Pricing",
+      "desc": "Prices listed exclude parts and may vary depending on the device."
+    }
+  },
   "GincoreWidgetBtn": "Check repair status"
 }

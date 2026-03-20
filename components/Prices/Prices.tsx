@@ -11,7 +11,8 @@ import { useTranslations } from "next-intl";
 import PricesAccordion from "./PricesAccordion/PricesAccordion";
 
 const Prices = () => {
-  const t = useTranslations("Home.HomeCTA");
+  const buttonTrans = useTranslations("Home.HomeCTA");
+  const t = useTranslations("Prices.Sheet");
   return (
     <Sheet>
       <SheetTrigger
@@ -20,13 +21,13 @@ const Prices = () => {
           variant: "secondary",
         })}
       >
-        {t("secondaryCTA")}
+        {buttonTrans("secondaryCTA")}
       </SheetTrigger>
       <SheetContent className="bg-accent">
         <SheetHeader>
-          <SheetTitle>Service Pricing</SheetTitle>
+          <SheetTitle>{t("title")}</SheetTitle>
           <SheetDescription className="font-medium">
-            Prices listed exclude parts and may vary depending on the device.
+            {t("desc")}
           </SheetDescription>
         </SheetHeader>
         <PricesAccordion />
