@@ -120,6 +120,65 @@
     "Sheet": {
       "title": "Service Pricing",
       "desc": "Prices listed exclude parts and may vary depending on the device."
+    },
+    "Categories": {
+      "smartphones": "Smartphones",
+      "iphone": "iPhone",
+      "tablets": "Tablets",
+      "laptops": "Laptops",
+      "pc": "PC",
+      "additional_services": "Additional Services"
+    },
+    "Items": {
+      "diagnostics": "Diagnostics",
+      "diagnostics_with_repair": "Diagnostics with further repair",
+
+      "screen_replacement": "Screen replacement",
+      "battery_replacement": "Battery replacement",
+      "back_cover_replacement": "Back cover replacement",
+      "charging_port_replacement": "Charging port replacement",
+      "speaker_microphone_replacement": "Speaker / microphone replacement",
+      "earpiece_replacement": "Earpiece (call speaker) replacement",
+      "camera_replacement": "Camera replacement",
+      "buttons_flex_replacement": "Buttons / flex cable replacement",
+
+      "liquid_damage_cleaning": "Liquid damage cleaning",
+      "water_damage_repair": "Water damage repair",
+
+      "soldering_board_repair": "Soldering / component-level board repair",
+      "advanced_board_repair": "Advanced board repair",
+      "board_repair": "Board repair / soldering",
+
+      "data_transfer": "Data transfer",
+      "software_update": "Software update / flashing / recovery",
+      "software_recovery": "Software flashing / recovery",
+
+      "reset_setup": "Reset, setup, troubleshooting",
+
+      "back_glass_replacement": "Back glass / housing replacement",
+      "flex_camera_speaker_replacement": "Flex cables, camera, speaker replacement",
+
+      "cooling_cleaning": "Cooling system cleaning",
+      "keyboard_replacement": "Keyboard replacement",
+      "power_connector_replacement": "Power connector replacement",
+      "storage_replacement": "SSD / HDD replacement",
+      "ram_upgrade": "RAM installation / upgrade",
+      "windows_installation": "Windows installation",
+      "bios_recovery": "BIOS recovery",
+      "motherboard_repair": "Motherboard repair / soldering",
+
+      "dust_cleaning": "Dust cleaning",
+      "pc_assembly": "PC assembly",
+      "hardware_upgrade": "Hardware upgrade",
+      "windows_driver_installation": "Windows and driver installation",
+
+      "urgent_repair": "Urgent repair",
+      "on_site_service": "On-site service",
+      "consultation": "Consultation without repair"
+    },
+    "Formats": {
+      "From": "from",
+      "Free": "free"
     }
   },
   "GincoreWidgetBtn": "Check repair status"

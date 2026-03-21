@@ -116,10 +116,70 @@
       "title": "Зв’яжіться з нами"
     }
   },
+
   "Prices": {
     "Sheet": {
       "title": "Ціни на послуги",
-      "desc": "Ціни вказані без вартості деталей і можуть змінюватися залежно від пристрою."
+      "desc": "Вказані ціни не включають вартість запчастин і можуть змінюватися залежно від пристрою."
+    },
+    "Categories": {
+      "smartphones": "Смартфони",
+      "iphone": "iPhone",
+      "tablets": "Планшети",
+      "laptops": "Ноутбуки",
+      "pc": "ПК",
+      "additional_services": "Додаткові послуги"
+    },
+    "Items": {
+      "diagnostics": "Діагностика",
+      "diagnostics_with_repair": "Діагностика з подальшим ремонтом",
+
+      "screen_replacement": "Заміна екрана",
+      "battery_replacement": "Заміна акумулятора",
+      "back_cover_replacement": "Заміна задньої кришки",
+      "charging_port_replacement": "Заміна роз'єму зарядки",
+      "speaker_microphone_replacement": "Заміна динаміка / мікрофона",
+      "earpiece_replacement": "Заміна розмовного динаміка",
+      "camera_replacement": "Заміна камери",
+      "buttons_flex_replacement": "Заміна кнопок / шлейфу",
+
+      "liquid_damage_cleaning": "Чистка після потрапляння рідини",
+      "water_damage_repair": "Ремонт після потрапляння води",
+
+      "soldering_board_repair": "Пайка / ремонт плати на компонентному рівні",
+      "advanced_board_repair": "Складний ремонт плати",
+      "board_repair": "Ремонт плати / пайка",
+
+      "data_transfer": "Перенесення даних",
+      "software_update": "Оновлення / прошивка / відновлення ПЗ",
+      "software_recovery": "Прошивка / відновлення ПЗ",
+
+      "reset_setup": "Скидання, налаштування, діагностика",
+
+      "back_glass_replacement": "Заміна заднього скла / корпусу",
+      "flex_camera_speaker_replacement": "Заміна шлейфів, камери, динаміка",
+
+      "cooling_cleaning": "Чистка системи охолодження",
+      "keyboard_replacement": "Заміна клавіатури",
+      "power_connector_replacement": "Заміна роз'єму живлення",
+      "storage_replacement": "Заміна SSD / HDD",
+      "ram_upgrade": "Встановлення / оновлення RAM",
+      "windows_installation": "Встановлення Windows",
+      "bios_recovery": "Відновлення BIOS",
+      "motherboard_repair": "Ремонт материнської плати / пайка",
+
+      "dust_cleaning": "Чистка від пилу",
+      "pc_assembly": "Збірка ПК",
+      "hardware_upgrade": "Оновлення комплектуючих",
+      "windows_driver_installation": "Встановлення Windows та драйверів",
+
+      "urgent_repair": "Терміновий ремонт",
+      "on_site_service": "Виїзд майстра",
+      "consultation": "Консультація без ремонту"
+    },
+    "Formats": {
+      "From": "від",
+      "Free": "безкоштовно"
     }
   },
   "GincoreWidgetBtn": "Перевірити статус ремонту"

@@ -116,10 +116,70 @@
       "title": "Kontakt aufnehmen"
     }
   },
+
   "Prices": {
     "Sheet": {
       "title": "Servicepreise",
-      "desc": "Die Preise verstehen sich ohne Teilekosten und können je nach Gerät variieren."
+      "desc": "Die angegebenen Preise verstehen sich ohne Ersatzteile und können je nach Gerät variieren."
+    },
+    "Categories": {
+      "smartphones": "Smartphones",
+      "iphone": "iPhone",
+      "tablets": "Tablets",
+      "laptops": "Laptops",
+      "pc": "PC",
+      "additional_services": "Zusätzliche Leistungen"
+    },
+    "Items": {
+      "diagnostics": "Diagnose",
+      "diagnostics_with_repair": "Diagnose mit anschließender Reparatur",
+
+      "screen_replacement": "Bildschirmtausch",
+      "battery_replacement": "Akkutausch",
+      "back_cover_replacement": "Rückabdeckung austauschen",
+      "charging_port_replacement": "Ladeanschluss austauschen",
+      "speaker_microphone_replacement": "Lautsprecher / Mikrofon austauschen",
+      "earpiece_replacement": "Hörmuschel ersetzen",
+      "camera_replacement": "Kamera austauschen",
+      "buttons_flex_replacement": "Tasten / Flexkabel austauschen",
+
+      "liquid_damage_cleaning": "Reinigung bei Flüssigkeitsschaden",
+      "water_damage_repair": "Reparatur bei Wasserschaden",
+
+      "soldering_board_repair": "Löten / Platinenreparatur auf Komponentenebene",
+      "advanced_board_repair": "Fortgeschrittene Platinenreparatur",
+      "board_repair": "Platinenreparatur / Löten",
+
+      "data_transfer": "Datenübertragung",
+      "software_update": "Softwareupdate / Flash / Wiederherstellung",
+      "software_recovery": "Software-Flash / Wiederherstellung",
+
+      "reset_setup": "Zurücksetzen, Einrichtung, Fehlerbehebung",
+
+      "back_glass_replacement": "Rückglas / Gehäuse ersetzen",
+      "flex_camera_speaker_replacement": "Flexkabel, Kamera, Lautsprecher ersetzen",
+
+      "cooling_cleaning": "Reinigung des Kühlsystems",
+      "keyboard_replacement": "Tastaturtausch",
+      "power_connector_replacement": "Stromanschluss ersetzen",
+      "storage_replacement": "SSD / HDD ersetzen",
+      "ram_upgrade": "RAM installieren / aufrüsten",
+      "windows_installation": "Windows-Installation",
+      "bios_recovery": "BIOS-Wiederherstellung",
+      "motherboard_repair": "Mainboard-Reparatur / Löten",
+
+      "dust_cleaning": "Staubentfernung",
+      "pc_assembly": "PC-Zusammenbau",
+      "hardware_upgrade": "Hardware-Upgrade",
+      "windows_driver_installation": "Windows- und Treiberinstallation",
+
+      "urgent_repair": "Dringende Reparatur",
+      "on_site_service": "Vor-Ort-Service",
+      "consultation": "Beratung ohne Reparatur"
+    },
+    "Formats": {
+      "From": "ab",
+      "Free": "kostenlos"
     }
   },
   "GincoreWidgetBtn": "Reparaturstatus prüfen"

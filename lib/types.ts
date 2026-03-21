@@ -40,12 +40,13 @@ export interface Review {
 }
 
 export type PriceItem = {
-  label: string;
-  price: string;
+  key: string;
+  price: number;
+  from?: boolean;
 };
 
 export type PriceCategory = {
-  label: string;
+  key: string;
   icon: LucideIcon;
   items: PriceItem[];
 };
