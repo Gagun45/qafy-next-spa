@@ -70,20 +70,17 @@ const MobileNav = ({ closeMenu }: Props) => {
           animate="visible"
           className="flex flex-col gap-2 pb-6"
         >
-          {LINKS.map((link) => {
-            const isContact = link.href === "contacts";
-            return (
-              <motion.li variants={itemVariants} key={link.href} className="w-full">
-                <button
-                  type="button"
-                  onClick={() => navigateToSection(link.href)}
-                  className={`block w-full cursor-pointer rounded-2xl px-4 py-3 text-left text-base font-medium transition-colors hover:bg-accent hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring ${isContact ? "mt-2 bg-primary text-center font-semibold text-primary-foreground shadow-lg shadow-primary/20 hover:bg-primary/90 hover:text-primary-foreground" : ""}`}
-                >
-                  {t(link.href)}
-                </button>
-              </motion.li>
-            );
-          })}
+          {LINKS.map((link) => (
+            <motion.li variants={itemVariants} key={link.href} className="w-full">
+              <button
+                type="button"
+                onClick={() => navigateToSection(link.href)}
+                className="block w-full cursor-pointer rounded-2xl px-4 py-3 text-left text-base font-medium transition-colors hover:bg-accent hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              >
+                {t(link.href)}
+              </button>
+            </motion.li>
+          ))}
         </motion.ul>
         <div className="flex items-center justify-between border-t border-border pt-5">
           <ThemeToggle />
