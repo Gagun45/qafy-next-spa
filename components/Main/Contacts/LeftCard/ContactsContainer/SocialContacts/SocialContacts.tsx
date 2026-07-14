@@ -3,7 +3,7 @@ import ContactCard from "../ContactCard/ContactCard";
 
 const SocialContacts = () => {
   return (
-    <ul className="flex gap-6 flex-wrap flex-col md:flex-row">
+    <ul className="flex flex-wrap gap-3">
       {CONTACTS_SOCIAL.map((contact) => (
         <ContactCard
           key={contact.label}

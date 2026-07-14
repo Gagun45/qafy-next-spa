@@ -14,8 +14,8 @@ const ImageInput = ({ ref, setFiles }: Props) => {
     i: (chunk) => <i>{chunk}</i>,
   });
   return (
-    <Label className="flex flex-col gap-1 items-start">
-      <span>{label}</span>
+    <Label className="flex flex-col items-start gap-2 rounded-2xl border border-dashed border-input/70 bg-accent/30 p-4 transition-colors hover:border-primary/40 hover:bg-accent/60">
+      <span className="font-medium">{label}</span>
       <Input
         ref={ref}
         type="file"

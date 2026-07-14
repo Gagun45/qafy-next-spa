@@ -10,7 +10,7 @@ const SubmitBtn = ({ loading }: Props) => {
   const submit = t("submit");
   const submitting = t("submitting");
   return (
-    <Button className="w-full" type="submit">
+    <Button className="h-12 w-full rounded-xl text-base font-semibold shadow-lg shadow-primary/20" type="submit">
       {loading ? submitting : submit}
     </Button>
   );

@@ -6,6 +6,6 @@ interface Props {
 }
 
 const Container = ({ children, className }: Props) => {
-  return <div className={`h-full px-4 w-full max-w-6xl mx-auto flex flex-col items-center ${className}`}>{children}</div>;
+  return <div className={`mx-auto flex h-full w-full max-w-7xl flex-col items-center px-5 sm:px-8 ${className ?? ""}`}>{children}</div>;
 };
 export default Container;

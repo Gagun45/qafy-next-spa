@@ -9,26 +9,26 @@ import ServiceCard from "./ServiceCard/ServiceCard";
 
 const services: Service[] = [
   {
-    icon: <FaMobileAlt className="text-4xl mb-4" />,
+    icon: <FaMobileAlt className="size-7" />,
     transKey: "phone",
   },
   {
-    icon: <FaLaptop className="text-4xl mb-4" />,
+    icon: <FaLaptop className="size-7" />,
     transKey: "laptop",
   },
   {
-    icon: <FaBatteryHalf className="text-4xl mb-4" />,
+    icon: <FaBatteryHalf className="size-7" />,
     transKey: "battery",
   },
   {
-    icon: <FaDatabase className="text-4xl mb-4" />,
+    icon: <FaDatabase className="size-7" />,
     transKey: "data",
   },
 ];
 
 const ServicesGrid = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div className="grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
       {services.map((service, index) => (
         <ServiceCard key={service.transKey} service={service} index={index} />
       ))}

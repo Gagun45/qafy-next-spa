@@ -31,10 +31,10 @@ const LocaleSwitcher = () => {
       value={currentLocale}
       onValueChange={(value) => handleLocaleChange(value)}
     >
-      <SelectTrigger className="w-fit bg-transparent!" aria-label={'Choose language'}>
+      <SelectTrigger className="w-fit rounded-full border-border bg-card/80! shadow-sm" aria-label={'Choose language'}>
         <SelectValue />
       </SelectTrigger>
-      <SelectContent align="end" className="w-fit min-w-0">
+      <SelectContent align="end" className="w-fit min-w-0 rounded-xl border-border">
         {locales.map(({ locale, Component }) => (
           <SelectItem key={locale} value={locale}>
             <Component />

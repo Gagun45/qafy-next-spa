@@ -23,10 +23,10 @@ const Prices = () => {
       >
         {buttonTrans("secondaryCTA")}
       </SheetTrigger>
-      <SheetContent className="bg-accent">
-        <SheetHeader>
-          <SheetTitle>{t("title")}</SheetTitle>
-          <SheetDescription className="font-medium">
+      <SheetContent className="w-full border-border bg-background/95 backdrop-blur-xl sm:max-w-xl">
+        <SheetHeader className="border-b border-border p-6 pr-14">
+          <SheetTitle className="text-2xl font-bold tracking-tight">{t("title")}</SheetTitle>
+          <SheetDescription className="pt-1 font-medium leading-6">
             {t("desc")}
           </SheetDescription>
         </SheetHeader>

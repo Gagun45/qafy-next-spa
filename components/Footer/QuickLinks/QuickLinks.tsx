@@ -7,12 +7,12 @@ const QuickLinks = () => {
   const title = t("Footer.QuickLinks.title");
   return (
     <div className="h-full">
-      <h4 className="text-lg font-semibold mb-4">{title}</h4>
-      <ul className="space-y-2">
+      <h4 className="microLabel mb-5 text-slate-500">{title}</h4>
+      <ul className="space-y-3">
         {LINKS.map((link) => (
           <li key={link.href}>
             <SmoothLink
-              className="text-muted-foreground underline"
+              className="text-sm text-slate-400 transition-colors hover:text-white"
               to={link.href}
             >
               {t(`NavLinks.${link.href}`)}

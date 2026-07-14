@@ -4,9 +4,9 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(1.0000 0 0);
-  --foreground: oklch(0.1884 0.0128 248.5103);
-  --card: oklch(0.9784 0.0011 197.1387);
+  --background: oklch(0.985 0.004 244);
+  --foreground: oklch(0.205 0.025 249);
+  --card: oklch(1 0 0);
   --card-foreground: oklch(0.1884 0.0128 248.5103);
   --popover: oklch(1.0000 0 0);
   --popover-foreground: oklch(0.1884 0.0128 248.5103);
@@ -14,14 +14,14 @@
   --primary-foreground: oklch(1.0000 0 0);
   --secondary: oklch(0.1884 0.0128 248.5103);
   --secondary-foreground: oklch(1.0000 0 0);
-  --muted: oklch(0.9222 0.0013 286.3737);
-  --muted-foreground: oklch(18.836% 0.01286 248.555);
-  --accent: oklch(0.9392 0.0166 250.8453);
+  --muted: oklch(0.943 0.009 244);
+  --muted-foreground: oklch(0.49 0.024 248);
+  --accent: oklch(0.955 0.019 247);
   --accent-foreground: oklch(0.6723 0.1606 244.9955);
   --destructive: oklch(0.6188 0.2376 25.7658);
   --destructive-foreground: oklch(1.0000 0 0);
-  --border: oklch(0.9317 0.0118 231.6594);
-  --input: oklch(0.3020 0.0288 244.8244);
+  --border: oklch(0.895 0.018 244);
+  --input: oklch(0.83 0.026 244);
   --ring: oklch(0.6818 0.1584 243.3540);
   --chart-1: oklch(0.6723 0.1606 244.9955);
   --chart-2: oklch(0.6907 0.1554 160.3454);
@@ -39,24 +39,24 @@
 }
 
 .dark {
-  --background: oklch(0 0 0);
-  --foreground: oklch(0.9328 0.0025 228.7857);
-  --card: oklch(0.2097 0.0080 274.5332);
+  --background: oklch(0.145 0.025 252);
+  --foreground: oklch(0.94 0.007 238);
+  --card: oklch(0.195 0.028 252);
   --card-foreground: oklch(0.8853 0 0);
-  --popover: oklch(0 0 0);
+  --popover: oklch(0.18 0.027 252);
   --popover-foreground: oklch(0.9328 0.0025 228.7857);
   --primary: oklch(0.6692 0.1607 245.0110);
   --primary-foreground: oklch(1.0000 0 0);
   --secondary: oklch(0.9622 0.0035 219.5331);
   --secondary-foreground: oklch(0.1884 0.0128 248.5103);
-  --muted: oklch(0.2090 0 0);
-  --muted-foreground: oklch(0.5637 0.0078 247.9662);
-  --accent: oklch(0.1928 0.0331 242.5459);
+  --muted: oklch(0.225 0.025 250);
+  --muted-foreground: oklch(0.69 0.02 242);
+  --accent: oklch(0.22 0.045 247);
   --accent-foreground: oklch(0.6692 0.1607 245.0110);
   --destructive: oklch(0.6188 0.2376 25.7658);
   --destructive-foreground: oklch(1.0000 0 0);
-  --border: oklch(0.2674 0.0047 248.0045);
-  --input: oklch(0.9809 0.0025 228.7836);
+  --border: oklch(0.31 0.035 248);
+  --input: oklch(0.42 0.04 246);
   --ring: oklch(0.6818 0.1584 243.3540);
   --chart-1: oklch(0.6723 0.1606 244.9955);
   --chart-2: oklch(0.6907 0.1554 160.3454);
@@ -114,30 +114,93 @@
 
 @layer base {
   html {
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
   }
   * {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    background-image: radial-gradient(circle at 15% 0%, color-mix(in oklch, var(--primary) 8%, transparent), transparent 28rem);
+    font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+    font-optical-sizing: auto;
+    font-synthesis: none;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    text-rendering: optimizeLegibility;
   }
   section {
-    @apply w-full text-center py-20
+    @apply relative w-full py-20 text-center md:py-28;
   }
-   h2 {
-    @apply text-3xl md:text-4xl font-bold mb-6
+  h1, h2, h3 {
+    text-wrap: balance;
+    font-variation-settings: "wght" 720;
+  }
+  h2 {
+    @apply mb-5 text-3xl font-bold leading-[1.08] tracking-[-0.035em] md:text-5xl;
+  }
+  h3 {
+    @apply leading-tight tracking-[-0.02em];
   }
   p {
-    @apply text-muted-foreground
+    @apply text-muted-foreground;
+    text-wrap: pretty;
+  }
+  strong {
+    font-variation-settings: "wght" 680;
+  }
+  button, a, label {
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    @apply bg-primary/25 text-foreground;
   }
 }
 
 @layer components {
   .ctaBtn {
-    @apply py-6! text-lg! transition-colors! rounded-xl! font-semibold! w-full sm:max-w-1/2
+    @apply h-14! w-full rounded-2xl! px-7! text-base! font-semibold! tracking-[-0.01em] shadow-lg shadow-primary/15 transition-all! hover:-translate-y-0.5 sm:w-auto sm:min-w-56;
   }
   .sectionSubtitle {
-    @apply max-w-3xl mx-auto mb-12
+    @apply mx-auto mb-12 max-w-2xl text-base leading-7 md:mb-16 md:text-lg;
+    text-wrap: balance;
+  }
+  .sectionEyebrow {
+    @apply mb-4 inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-primary;
+  }
+  .surfaceCard {
+    @apply rounded-3xl border border-border/80 bg-card/85 shadow-[0_18px_60px_-38px_rgba(15,23,42,0.55)] backdrop-blur-sm;
+  }
+  .iconTile {
+    @apply flex size-14 items-center justify-center rounded-2xl border border-primary/20 bg-primary/10 text-primary shadow-inner shadow-primary/5;
+  }
+  .interactiveLink {
+    @apply decoration-primary/50 underline-offset-4 transition-colors hover:text-primary hover:underline;
+  }
+  .displayTitle {
+    font-variation-settings: "wght" 760;
+    text-wrap: balance;
+  }
+  .cardTitle {
+    font-variation-settings: "wght" 690;
+    text-wrap: balance;
+  }
+  .microLabel {
+    @apply text-[0.6875rem] font-bold uppercase tracking-[0.19em];
+  }
+  .numeric {
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }

@@ -33,12 +33,17 @@ const Header = () => {
   return (
     <header
       className={`${
-        (scrolled && !menuOpen) && "outline outline-foreground"
-      } w-full bg-accent h-24 sticky top-0 z-10`}
+        scrolled && !menuOpen
+          ? "border-border/80 bg-background/85 shadow-[0_12px_35px_-24px_rgba(15,23,42,0.7)]"
+          : "border-transparent bg-background/70"
+      } sticky top-0 z-40 h-24 w-full border-b backdrop-blur-xl transition-[background-color,border-color,box-shadow] duration-300`}
     >
       <Container className="flex-row justify-between gap-4">
         <div className="flex items-center gap-4">
-          <SmoothLink to="home" className="text-3xl tracking-widest font-serif">Qafy Mobile</SmoothLink>
+          <SmoothLink to="home" className="group flex items-center gap-3 text-xl font-bold tracking-tight sm:text-2xl">
+            <span className="flex size-10 items-center justify-center rounded-2xl bg-primary text-sm font-black text-primary-foreground shadow-lg shadow-primary/25 transition-transform group-hover:-rotate-3">Q</span>
+            <span>Qafy <span className="text-primary">Mobile</span></span>
+          </SmoothLink>
           <div className="lg:flex items-center gap-4 hidden">
             <ThemeToggle />
             <LocaleSwitcher />

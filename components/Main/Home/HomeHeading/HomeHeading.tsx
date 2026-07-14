@@ -1,28 +1,18 @@
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 
 const HomeHeading = () => {
   const t = useTranslations("Home.HomeHeading");
   return (
     <>
-      <Image
-        src="/pngegg_optimized.webp"
-        alt="Qafy Mobile Logo"
-        className="mb-6 mx-auto"
-        priority
-        width={250}
-        height={250}
-        sizes="250px"
-      />
-
-      {/* Title */}
-      <h1 className="text-4xl sm:text-6xl text-center font-bold leading-tight mb-4">
-        {t("titleFirst")} <br />
-        <span className="text-primary">{t("titleSecond")}</span>
+      <span className="microLabel mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/8 px-4 py-2 text-blue-200 backdrop-blur-md">
+        <span className="size-2 rounded-full bg-primary shadow-[0_0_16px_rgba(42,145,255,0.9)]" />
+        Qafy Mobile
+      </span>
+      <h1 className="displayTitle mb-6 max-w-3xl text-left text-5xl leading-[0.98] tracking-[-0.055em] text-white sm:text-6xl lg:text-7xl">
+        {t("titleFirst")}{" "}
+        <span className="bg-linear-to-r from-blue-300 to-primary bg-clip-text text-transparent">{t("titleSecond")}</span>
       </h1>
-
-      {/* Subtitle */}
-      <p className="text-lg sm:text-xl mb-8 text-center">{t("subtitle")}</p>
+      <p className="mb-10 max-w-2xl text-left text-lg leading-[1.65] tracking-[-0.01em] text-slate-300 sm:text-xl">{t("subtitle")}</p>
     </>
   );
 };

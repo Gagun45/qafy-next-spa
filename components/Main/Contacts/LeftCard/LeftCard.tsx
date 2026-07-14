@@ -12,10 +12,11 @@ const LeftCard = () => {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
-      className="flex flex-col justify-center"
+      className="relative overflow-hidden rounded-[1.35rem] bg-[#071b3b] p-7 text-left text-white md:p-10 lg:p-12"
     >
-      <h2>{title}</h2>
-      <p className="sectionSubtitle">{subtitle}</p>
+      <div className="pointer-events-none absolute -right-20 -top-20 size-64 rounded-full bg-primary/25 blur-3xl" />
+      <h2 className="relative text-white">{title}</h2>
+      <p className="relative mb-10 max-w-xl leading-7 text-blue-100/70">{subtitle}</p>
 
       <ContactsContainer />
     </motion.div>

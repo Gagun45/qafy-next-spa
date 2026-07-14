@@ -6,17 +6,17 @@ const GetInTouch = () => {
   const title = t("title");
   return (
     <div className="space-y-4 h-full">
-      <h4 className="text-lg font-semibold mb-4">{title}</h4>
-      <ul className="space-y-4">
+      <h4 className="microLabel mb-5 text-slate-500">{title}</h4>
+      <ul className="space-y-3">
         {CONTACTS_GENERAL.map((contact) => (
           <li
             key={contact.label}
-            className="flex justify-center hover:underline underline-offset-2 md:justify-start"
+            className="flex justify-center md:justify-start"
           >
             <a
               href={contact.href}
               target="_blank"
-              className="flex items-center justify-center gap-2"
+              className="flex items-center justify-center gap-3 text-sm text-slate-400 transition-colors hover:text-white"
             >
               <contact.icon className="text-primary size-6" />
               <span>{contact.label}</span>
@@ -25,7 +25,7 @@ const GetInTouch = () => {
         ))}
       </ul>
 
-      <ul className="flex justify-center items-center md:justify-start gap-8 flex-wrap">
+      <ul className="flex flex-wrap items-center justify-center gap-3 md:justify-start">
         {CONTACTS_SOCIAL.map((contact) => {
           const textColor =
             contact.label === "Telegram"
@@ -39,6 +39,7 @@ const GetInTouch = () => {
                 href={contact.href}
                 target="_blank"
                 aria-label={`${contact.label} link`}
+                className="flex size-10 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all hover:-translate-y-0.5 hover:bg-white/10"
               >
                 <contact.icon className="size-6" />
               </a>

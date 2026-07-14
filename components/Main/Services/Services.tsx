@@ -6,7 +6,8 @@ import ServicesGrid from "./ServicesGrid/ServicesGrid";
 
 const Services = () => {
   return (
-    <section id="services">
+    <section id="services" className="overflow-hidden">
+      <div className="pointer-events-none absolute -right-40 top-20 size-96 rounded-full bg-primary/8 blur-3xl" />
       <Container>
         <ServicesHeading />
         <ServicesGrid />

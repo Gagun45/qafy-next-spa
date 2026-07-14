@@ -25,17 +25,17 @@ const MobileNav = ({ closeMenu, menuOpen }: Props) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.15 }}
-          className="lg:hidden bg-linear-to-b from-accent to-background border-b border-foreground backdrop-blur-md px-6 pb-6 absolute top-24 w-full -z-10!"
+          className="absolute top-24 z-30 w-full border-b border-border bg-background/95 px-5 pb-6 shadow-2xl shadow-black/10 backdrop-blur-xl lg:hidden"
         >
-          <ul className="flex flex-col space-y-6 tracking-wider pb-6 items-center">
+          <ul className="flex flex-col gap-2 pb-6">
             {LINKS.map((link) => {
               const isContact = link.label === "Contacts";
               return (
-                <li key={link.href}>
+                <li key={link.href} className="w-full">
                   <SmoothLink
                     onClick={closeMenu}
                     to={link.href}
-                    className={` hover:underline text-lg ${isContact && "border px-4 py-2 rounded-lg border-foreground bg-foreground text-background"}`}
+                    className={`block w-full rounded-2xl px-4 py-3 text-left text-base transition-colors hover:bg-accent hover:text-primary ${isContact ? "mt-2 bg-primary text-center font-semibold text-primary-foreground shadow-lg shadow-primary/20 hover:bg-primary/90 hover:text-primary-foreground" : ""}`}
                   >
                     {t(`${link.href}`)}
                   </SmoothLink>
@@ -43,7 +43,7 @@ const MobileNav = ({ closeMenu, menuOpen }: Props) => {
               );
             })}
           </ul>
-          <div className="flex items-center justify-center gap-8">
+          <div className="flex items-center justify-between border-t border-border pt-5">
             <ThemeToggle />
             <LocaleSwitcher />
           </div>

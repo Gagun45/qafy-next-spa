@@ -12,9 +12,9 @@ const PriceRow = ({ item: { key, price, from } }: Props) => {
       ? t("Formats.Free")
       : `${from ? t("Formats.From") : ""} ${price} €`;
   return (
-    <div className="flex justify-between pb-1 sm:pl-2 border-b border-muted-foreground">
-      <span>{t(`Items.${key}`)}</span>
-      <span className="font-medium">{formattedPrice}</span>
+    <div className="grid grid-cols-[minmax(0,1fr)_auto] items-end gap-4 border-b border-border/70 py-2.5 last:border-0">
+      <span className="min-w-0 text-left leading-5 text-muted-foreground">{t(`Items.${key}`)}</span>
+      <span className="numeric whitespace-nowrap text-right font-bold tracking-[-0.015em] text-foreground">{formattedPrice}</span>
     </div>
   );
 };

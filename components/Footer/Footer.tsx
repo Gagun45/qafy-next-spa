@@ -7,11 +7,15 @@ import GetInTouch from "./GetInTouch/GetInTouch";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-linear-to-b border-t border-t-foreground from-background to-accent">
-      <Container className="grid md:grid-cols-3 py-12 gap-10 md:text-left text-center">
-        <FooterText />
-        <QuickLinks />
-        <GetInTouch/>
+    <footer className="w-full border-t border-border bg-[#071426] text-slate-200">
+      <Container className="py-14 md:py-16">
+        <div className="grid w-full gap-12 text-center md:grid-cols-[1.4fr_0.8fr_1fr] md:text-left">
+          <FooterText />
+          <QuickLinks />
+          <GetInTouch/>
+        </div>
+        <div className="mt-12 h-px w-full bg-linear-to-r from-transparent via-white/15 to-transparent" />
+        <div className="mt-6 flex w-full items-center justify-center text-xs text-slate-500 md:justify-start">Qafy Mobile</div>
       </Container>
     </footer>
   );

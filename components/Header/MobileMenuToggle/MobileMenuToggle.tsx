@@ -11,10 +11,10 @@ const MobileMenuToggle = ({ menuOpen, toggleMenu }: Props) => {
     <Button
       onClick={toggleMenu}
       variant={"ghost"}
-      className="lg:hidden p-0! aspect-square"
+      className="aspect-square rounded-full border border-border bg-card/70 p-0! shadow-sm lg:hidden"
       aria-label="Toggle mobile menu"
     >
-      {menuOpen ? <X className="size-8" /> : <Menu className="size-8" />}
+      {menuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
     </Button>
   );
 };

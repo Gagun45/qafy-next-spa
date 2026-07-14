@@ -3,7 +3,7 @@ import SocialContacts from "./SocialContacts/SocialContacts";
 
 const ContactsContainer = () => {
   return (
-    <div className="flex flex-col gap-6 sm:flex-row md:flex-col justify-evenly">
+    <div className="relative flex flex-col gap-8">
       <GeneralContacts />
       <SocialContacts />
     </div>

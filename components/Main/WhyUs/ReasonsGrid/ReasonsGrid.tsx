@@ -4,26 +4,26 @@ import ReasonCard from "./ReasonCard/ReasonCard";
 
 const features: Reason[] = [
   {
-    icon: <FaShieldAlt className="text-4xl mb-4" />,
+    icon: <FaShieldAlt className="size-6" />,
     transKey: "warranty",
   },
   {
-    icon: <FaClock className="text-4xl mb-4" />,
+    icon: <FaClock className="size-6" />,
     transKey: "fast",
   },
   {
-    icon: <FaMedal className="text-4xl mb-4" />,
+    icon: <FaMedal className="size-6" />,
     transKey: "certified",
   },
   {
-    icon: <FaTools className="text-4xl mb-4" />,
+    icon: <FaTools className="size-6" />,
     transKey: "quality",
   },
 ];
 
 const ReasonsGrid = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2">
       {features.map((feature, index) => (
         <ReasonCard key={feature.transKey} feature={feature} index={index} />
       ))}

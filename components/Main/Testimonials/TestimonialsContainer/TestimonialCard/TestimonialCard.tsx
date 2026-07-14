@@ -1,6 +1,7 @@
 import type { Review } from "@/lib/types";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Quote, Star } from "lucide-react";
 
 interface Props {
   review: Review;
@@ -21,9 +22,10 @@ const TestimonialCard = ({ review, index }: Props) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: index * 0.1 }}
       viewport={{ once: true, margin: "100px" }}
-      className="bg-accent h-fit rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow"
+      className="surfaceCard group relative h-full overflow-hidden p-7 text-left transition-all duration-300 hover:-translate-y-1 hover:border-primary/25 md:p-8"
     >
-      <div className="flex items-center justify-between flex-wrap mb-2">
+      <Quote className="absolute right-6 top-6 size-12 text-primary/10 transition-transform group-hover:scale-110" />
+      <div className="mb-6 flex items-center justify-between gap-4 pr-10">
         <div className="flex items-center gap-2">
           {authorAttribution?.photoUri && (
             <Image
@@ -31,20 +33,22 @@ const TestimonialCard = ({ review, index }: Props) => {
               alt={authorAttribution.displayName}
               width={80}
               height={80}
-              className="w-10 h-10 rounded-full"
+              className="size-11 rounded-full border-2 border-background object-cover shadow-md"
             />
           )}
-          <strong className="text-primary">
+          <strong className="text-sm font-semibold tracking-[-0.01em] text-foreground">
             {authorAttribution.displayName}
           </strong>
         </div>
-        <span className="text-yellow-500">⭐ {rating}</span>
+        <span className="numeric flex items-center gap-1 rounded-full bg-amber-400/10 px-2.5 py-1 text-sm font-bold text-amber-500">
+          <Star className="size-3.5 fill-current" /> {rating}
+        </span>
       </div>
 
       {text && (
-        <p className="text-sm text-justify text-foreground mb-1">{text}</p>
+        <p className="mb-6 text-sm leading-7 text-foreground/85 md:text-base">{text}</p>
       )}
-      <p className="text-xs text-right italic">
+      <p className="mt-auto border-t border-border/70 pt-4 text-right text-xs italic">
         {relativePublishTimeDescription}
       </p>
     </motion.div>

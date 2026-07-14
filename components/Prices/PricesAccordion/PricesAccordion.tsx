@@ -11,20 +11,20 @@ import { useTranslations } from "next-intl";
 const PricesAccordion = () => {
   const t = useTranslations("Prices.Categories");
   return (
-    <div className="mt-6 flex-1 overflow-y-auto p-2">
-      <Accordion type="multiple" className="space-y-2 pb-2">
+    <div className="flex-1 overflow-y-auto px-4 py-5 sm:px-6">
+      <Accordion type="multiple" className="space-y-3 pb-2">
         {PRICING.map((category) => {
           return (
             <AccordionItem
               key={category.key}
               value={category.key}
-              className="border-2 border-foreground last:border-b-2 rounded-lg"
+              className="overflow-hidden rounded-2xl border border-border bg-card/70 px-1 shadow-sm last:border-b"
             >
-              <AccordionTrigger className="flex items-center justify-center gap-3 p-3 text-lg font-medium cursor-pointer">
+              <AccordionTrigger className="cursor-pointer gap-3 px-4 py-4 text-left text-base font-bold hover:no-underline">
                 {t(category.key)}
               </AccordionTrigger>
 
-              <AccordionContent className="px-4 py-2 space-y-2 text-sm">
+              <AccordionContent className="space-y-1 px-4 pb-4 text-sm">
                 {category.items.map((item) => (
                   <PriceRow key={item.key} item={item} />
                 ))}

@@ -54,14 +54,14 @@ const ContactForm = () => {
   };
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-        <fieldset className="space-y-8" disabled={loading}>
+      <form onSubmit={form.handleSubmit(onSubmit)}>
+        <fieldset className="space-y-6" disabled={loading}>
           <NameInput />
           <ContactInput />
           <MessageTextarea />
           <ImageInput ref={fileInputRef} setFiles={setFiles} />
-          {error && <p className="text-destructive">{error}</p>}
-          {success && <p className="text-green-500">{success}</p>}
+          {error && <p className="rounded-xl border border-destructive/25 bg-destructive/10 px-4 py-3 text-sm font-medium text-destructive">{error}</p>}
+          {success && <p className="rounded-xl border border-emerald-500/25 bg-emerald-500/10 px-4 py-3 text-sm font-medium text-emerald-600 dark:text-emerald-400">{success}</p>}
           <SubmitBtn loading={loading} />
         </fieldset>
       </form>
