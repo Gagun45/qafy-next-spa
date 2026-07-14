@@ -1,21 +1,30 @@
 import { Button } from "@/components/ui/button";
+import { DialogTrigger } from "@/components/ui/dialog";
 import { Menu, X } from "lucide-react";
 
 interface Props {
   menuOpen: boolean;
-  toggleMenu: () => void;
 }
 
-const MobileMenuToggle = ({ menuOpen, toggleMenu }: Props) => {
+const MobileMenuToggle = ({ menuOpen }: Props) => {
   return (
-    <Button
-      onClick={toggleMenu}
-      variant={"ghost"}
-      className="aspect-square rounded-full border border-border bg-card/70 p-0! shadow-sm lg:hidden"
-      aria-label="Toggle mobile menu"
-    >
-      {menuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
-    </Button>
+    <DialogTrigger asChild>
+      <Button
+        type="button"
+        variant="ghost"
+        className="relative size-11 rounded-full border border-border bg-card/70 p-0! shadow-sm lg:hidden"
+        aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+      >
+        <Menu
+          className={`absolute size-5 transition-all duration-200 ${menuOpen ? "rotate-90 scale-0 opacity-0" : "rotate-0 scale-100 opacity-100"}`}
+          aria-hidden="true"
+        />
+        <X
+          className={`absolute size-5 transition-all duration-200 ${menuOpen ? "rotate-0 scale-100 opacity-100" : "-rotate-90 scale-0 opacity-0"}`}
+          aria-hidden="true"
+        />
+      </Button>
+    </DialogTrigger>
   );
 };
 export default MobileMenuToggle;
