@@ -1,15 +1,16 @@
 "use client";
 
+import { Dialog } from "@/components/ui/dialog";
 import { useEffect, useState } from "react";
-import Container from "../General/Container/Container";
-import ThemeToggle from "../General/ThemeToggle/ThemeToggle";
 import { scrollSpy } from "react-scroll";
+import Container from "../General/Container/Container";
+import LocaleSwitcher from "../General/LocaleSwitcher/LocaleSwitcher";
+import LogoMark from "../General/LogoMark/LogoMark";
+import SmoothLink from "../General/SmoothLink/SmoothLink";
+import ThemeToggle from "../General/ThemeToggle/ThemeToggle";
 import DesktopNav from "./DesktopNav/DesktopNav";
 import MobileMenuToggle from "./MobileMenuToggle/MobileMenuToggle";
 import MobileNav from "./MobileNav/MobileNav";
-import LocaleSwitcher from "../General/LocaleSwitcher/LocaleSwitcher";
-import SmoothLink from "../General/SmoothLink/SmoothLink";
-import { Dialog } from "@/components/ui/dialog";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -50,9 +51,15 @@ const Header = () => {
       <Dialog open={menuOpen} onOpenChange={setMenuOpen}>
         <Container className="flex-row justify-between gap-4">
           <div className="flex items-center gap-4">
-            <SmoothLink to="home" className="group flex items-center gap-3 text-xl font-bold tracking-tight sm:text-2xl">
-              <span className="flex size-10 items-center justify-center rounded-2xl bg-primary text-sm font-black text-primary-foreground shadow-lg shadow-primary/25 transition-transform group-hover:-rotate-3">Q</span>
-              <span>Qafy <span className="text-primary">Mobile</span></span>
+            <SmoothLink
+              to="home"
+              className="group flex items-center gap-3 text-xl font-bold tracking-tight sm:text-2xl"
+            >
+              <LogoMark className="drop-shadow-[0_8px_16px_color-mix(in_oklch,var(--primary)_25%,transparent)] transition-transform duration-300 group-hover:-rotate-3 group-hover:scale-105" />
+
+              <span>
+                Qafy <span className="text-primary">Mobile</span>
+              </span>
             </SmoothLink>
             <div className="hidden items-center gap-4 lg:flex">
               <ThemeToggle />
