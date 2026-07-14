@@ -59,7 +59,7 @@ const ContactForm = () => {
           <NameInput />
           <ContactInput />
           <MessageTextarea />
-          <ImageInput ref={fileInputRef} setFiles={setFiles} />
+          <ImageInput ref={fileInputRef} files={files} setFiles={setFiles} />
           {error && <p className="rounded-xl border border-destructive/25 bg-destructive/10 px-4 py-3 text-sm font-medium text-destructive">{error}</p>}
           {success && <p className="rounded-xl border border-emerald-500/25 bg-emerald-500/10 px-4 py-3 text-sm font-medium text-emerald-600 dark:text-emerald-400">{success}</p>}
           <SubmitBtn loading={loading} />

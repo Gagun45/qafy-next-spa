@@ -17,7 +17,8 @@ const Prices = () => {
     <Sheet>
       <SheetTrigger
         className={buttonVariants({
-          className: "ctaBtn",
+          className:
+            "ctaBtn bg-white text-slate-950 hover:bg-slate-100 hover:text-slate-950",
           variant: "secondary",
         })}
       >
@@ -25,7 +26,9 @@ const Prices = () => {
       </SheetTrigger>
       <SheetContent className="w-full border-border bg-background/95 backdrop-blur-xl sm:max-w-xl">
         <SheetHeader className="border-b border-border p-6 pr-14">
-          <SheetTitle className="text-2xl font-bold tracking-tight">{t("title")}</SheetTitle>
+          <SheetTitle className="text-2xl font-bold tracking-tight">
+            {t("title")}
+          </SheetTitle>
           <SheetDescription className="pt-1 font-medium leading-6">
             {t("desc")}
           </SheetDescription>
